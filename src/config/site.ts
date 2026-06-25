@@ -8,7 +8,7 @@ export const SITE = {
   email: 'sales@desertrich.com',
   location: 'Scottsdale, Arizona',
   lastUpdated: '2026-06-25',
-  googleSiteVerification: 'dK9ibWYTzCFGb4-kHFwR3segENMegeA-lbzA25u8WaI',
+  googleSiteVerification: '1yuflbsMWg1R866zRnvqiN6ri8BrX63WyV8_Ni85ihc',
 } as const;
 
 export const CF_IMAGES = {
