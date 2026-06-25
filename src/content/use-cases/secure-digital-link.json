@@ -1,0 +1,8 @@
+{
+  "title": "Secure Digital Link Gateway",
+  "tag": "SECURITY / IAM",
+  "description": "Position as a secure contact verification or digital identity gateway. SDL as 'Secure Digital Link' conveys trust, encryption, and verified connections.",
+  "gradient": "from-emerald-500 to-teal-600",
+  "icon": "shield",
+  "order": 3
+}

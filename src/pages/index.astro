@@ -1,0 +1,114 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import Footer from '../components/Footer.astro';
+
+const sortByOrder = <T extends { data: { order: number } }>(items: T[]) =>
+  items.sort((a, b) => a.data.order - b.data.order);
+
+const [useCases, marketStats, valuePillars] = await Promise.all([
+  getCollection('use-cases'),
+  getCollection('market-stats'),
+  getCollection('value-pillars'),
+]);
+---
+
+<BaseLayout>
+  <Nav />
+  <main>
+    <Hero />
+
+    <TrustBar />
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="section-bg py-20 md:py-28">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="max-w-2xl mb-14">
+          <div class="text-xs uppercase tracking-[2.2px] text-desert-gold mb-4 font-bold">Strategic Positioning</div>
+          <h2 class="text-4xl sm:text-5xl font-display tracking-tight leading-tight">
+            Four powerful directions.<br />One <span class="gradient-text">unforgettable domain</span>.
+          </h2>
+          <p class="mt-4 text-lg text-zinc-400">
+            sdl.contact's 3-letter acronym unlocks multiple high-value verticals — each a viable, fundable platform category.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          {sortByOrder(useCases).map((entry) => (
+            <div class="use-case-card glass rounded-3xl p-7 border border-white/10">
+              <div class={`inline-flex text-xs px-3.5 py-1 rounded-full font-bold bg-gradient-to-r ${entry.data.gradient} text-white mb-4`}>
+                {entry.data.tag}
+              </div>
+              <h3 class="text-xl font-display font-semibold tracking-tight mb-3">{entry.data.title}</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">{entry.data.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Market Section -->
+    <section id="market" class="bg-black py-20 md:py-28 border-t border-white/10">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="max-w-2xl mb-14">
+          <div class="text-xs uppercase tracking-[2.2px] text-emerald-400 mb-4 font-bold">Market Position</div>
+          <h2 class="text-4xl sm:text-5xl font-display tracking-tight leading-tight">
+            Scarcity meets <span class="gradient-text">opportunity</span>.
+          </h2>
+          <p class="mt-4 text-lg text-zinc-400">
+            Premium short .contact domains are a rare asset class. Here's what makes sdl.contact uniquely positioned.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          {sortByOrder(marketStats).map((stat) => (
+            <div class="glass rounded-3xl p-7 border border-white/10">
+              <div class={`inline-flex text-xs px-3.5 py-1 rounded-full font-bold bg-gradient-to-r ${stat.data.gradient} text-white mb-5`}>
+                {stat.data.tag}
+              </div>
+              <h3 class="text-lg font-display font-semibold tracking-tight mb-3">{stat.data.title}</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">{stat.data.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Pillars Section -->
+    <section id="value" class="section-bg py-20 md:py-28 border-t border-white/10">
+      <div class="max-w-screen-xl mx-auto px-6">
+        <div class="max-w-2xl mb-14">
+          <div class="text-xs uppercase tracking-[2.2px] text-purple-400 mb-4 font-bold">Why This Domain</div>
+          <h2 class="text-4xl sm:text-5xl font-display tracking-tight leading-tight">
+            Built for builders.<br />Ready <span class="gradient-text">to deploy</span>.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-5">
+          {sortByOrder(valuePillars).map((pillar) => (
+            <div class="glass rounded-3xl p-7 border border-white/10">
+              <div class={`inline-flex text-xs px-3.5 py-1 rounded-full font-bold bg-gradient-to-r ${pillar.data.gradient} text-white mb-5`}>
+                #{pillar.data.order}
+              </div>
+              <h3 class="text-lg font-display font-semibold tracking-tight mb-3">{pillar.data.title}</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">{pillar.data.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Closing CTA -->
+        <div class="mt-16 text-center">
+          <div class="closing-cta inline-flex items-center gap-x-3 px-10 py-5 rounded-3xl glass border border-desert-gold/30">
+            <span class="text-lg font-display font-semibold">Ready to acquire sdl.contact?</span>
+            <span class="text-desert-gold font-bold">sales@desertrich.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>SDL.contact | Scottsdale Directory, Reviews &amp; Vendor Connections | The Destination Address for Everything Scottsdale, AZ</title>
+    <meta name="description" content="Discover verified Scottsdale, AZ businesses, read authentic reviews, get accurate contact information, and connect with local vendors &amp; event suppliers. Your premier destination for restaurants, golf, spas, events, real estate, and professional services in Scottsdale.">
+    <meta name="keywords" content="Scottsdale AZ, Scottsdale directory, Scottsdale reviews, Scottsdale businesses, best restaurants Scottsdale, Scottsdale golf, Scottsdale spas, Scottsdale events, Scottsdale vendors, event planners Scottsdale, contact information Scottsdale, Scottsdale directory listings, things to do in Scottsdale, Scottsdale real estate">
+    <meta name="author" content="SDL.contact">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sdl.contact/">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdl.contact/">
+    <meta property="og:title" content="SDL.contact | The Destination Address for Everything Scottsdale, AZ">
+    <meta property="og:description" content="Verified business listings, authentic reviews, accurate contacts, and vendor connections for Scottsdale, Arizona. Find the best local experiences and build relationships with trusted vendors.">
+    <meta property="og:image" content="https://sdl.contact/assets/images/hero.jpg">
+    <meta property="og:site_name" content="SDL.contact">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SDL.contact | Scottsdale's Premier Directory &amp; Review Hub">
+    <meta name="twitter:description" content="The destination address for everything Scottsdale, AZ — businesses, reviews, contacts &amp; vendor relations.">
+    
+    <!-- Structured Data: Organization + LocalBusiness examples -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SDL.contact",
+      "url": "https://sdl.contact",
+      "logo": "https://sdl.contact/assets/images/logo.png",
+      "description": "The destination address for everything Scottsdale, AZ. Verified business directory, reviews, contacts, and vendor relations platform.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Scottsdale",
+        "addressRegion": "AZ",
+        "addressCountry": "US"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Scottsdale"
+      },
+      "sameAs": []
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://sdl.contact",
+      "name": "SDL.contact - Scottsdale Directory & Reviews",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sdl.contact/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --primary: #0F172A;
+            --accent: #B45309;
+            --sage: #4A7043;
+            --sand: #F8F1E3;
+            --terracotta: #9F3F1F;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, #B45309, #9F3F1F);
+            border-radius: 3px;
+        }
+
+        .business-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .business-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #B45309;
+        }
+
+        .category-chip {
+            transition: all 0.2s ease;
+        }
+        
+        .category-chip.active, .category-chip:hover {
+            background-color: #0F172A;
+            color: white;
+            border-color: #0F172A;
+        }
+
+        .star {
+            color: #F59E0B;
+        }
+
+        .modal {
+            animation: modalPopIn 0.2s ease-out forwards;
+        }
+
+        @keyframes modalPopIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .listing-grid {
+            scrollbar-width: thin;
+            scrollbar-color: #CBD5E1 #F8FAFC;
+        }
+
+        .search-input {
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.1);
+        }
+
+        .desert-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E2937 100%);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .review-card {
+            transition: transform 0.2s ease;
+        }
+
+        .sdl-badge {
+            background: linear-gradient(90deg, #B45309, #9F3F1F);
+            color: white;
+            font-size: 10px;
+            padding: 1px 8px;
+            border-radius: 9999px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- NAV -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-slate-900 rounded-2xl flex items-center justify-center shadow-inner">
+                        <span class="text-white font-bold text-3xl tracking-tighter">SDL</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter text-slate-900">sdl<span class="text-amber-700">.</span>contact</div>
+                        <div class="text-[10px] text-slate-500 -mt-1.5 tracking-[1.5px]">SCOTTSDALE</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#directory" class="nav-link text-slate-700 hover:text-slate-900">Directory</a>
+                    <a href="#reviews" class="nav-link text-slate-700 hover:text-slate-900">Reviews</a>
+                    <a href="#vendors" class="nav-link text-slate-700 hover:text-slate-900">For Vendors</a>
+                    <a href="#discover" class="nav-link text-slate-700 hover:text-slate-900">Discover</a>
+                </div>
+
+                <div class="hidden md:flex items-center gap-x-4">
+                    <button onclick="showListBusinessModal()"
+                            class="px-5 py-2.5 text-sm font-semibold rounded-3xl border border-slate-300 hover:bg-slate-100 transition-colors">
+                        List Your Business
+                    </button>
+                    <button onclick="document.getElementById('directory').scrollIntoView({ behavior: 'smooth' })"
+                            class="px-6 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-3xl transition-all active:scale-[0.985]">
+                        Explore Directory
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden w-10 h-10 flex items-center justify-center text-slate-700" onclick="toggleMobileMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-6 py-4">
+            <div class="flex flex-col gap-y-3 text-sm font-medium">
+                <a href="#directory" class="py-2 text-slate-700" onclick="toggleMobileMenu()">Directory</a>
+                <a href="#reviews" class="py-2 text-slate-700" onclick="toggleMobileMenu()">Reviews</a>
+                <a href="#vendors" class="py-2 text-slate-700" onclick="toggleMobileMenu()">For Vendors</a>
+                <a href="#discover" class="py-2 text-slate-700" onclick="toggleMobileMenu()">Discover Scottsdale</a>
+                <div class="pt-3 border-t flex flex-col gap-y-3">
+                    <button onclick="showListBusinessModal(); toggleMobileMenu()" 
+                            class="w-full py-3 text-center border border-slate-300 rounded-3xl font-semibold text-sm">List Your Business</button>
+                    <button onclick="document.getElementById('directory').scrollIntoView({ behavior: 'smooth' }); toggleMobileMenu()" 
+                            class="w-full py-3 bg-slate-900 text-white rounded-3xl font-semibold text-sm">Explore Directory</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="relative h-[620px] md:h-[680px] flex items-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center" 
+             style="background-image: url('assets/images/hero.jpg')">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/60 to-slate-950/30"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950/20"></div>
+        </div>
+        
+        <div class="relative max-w-5xl mx-auto px-6 pt-12 md:pt-0">
+            <div class="max-w-3xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-x-2 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 shadow-sm border border-white/60">
+                    <div class="flex -space-x-1">
+                        <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white"></div>
+                        <div class="w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-white"></div>
+                    </div>
+                    <span class="text-xs font-semibold tracking-wider text-slate-700">TRUSTED BY 52,000+ SCOTTSDALE LOCALS &amp; VISITORS</span>
+                </div>
+
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tighter text-white leading-[1.05] heading-serif">
+                    The destination address<br>for <span class="text-amber-400">everything</span><br>Scottsdale, AZ.
+                </h1>
+                
+                <p class="mt-6 max-w-lg text-xl text-white/90">
+                    Verified local businesses, authentic reviews, accurate contact info, and meaningful vendor connections — all in one place.
+                </p>
+
+                <!-- Hero Search -->
+                <div class="mt-8 max-w-xl">
+                    <div class="relative group">
+                        <div class="flex bg-white rounded-3xl shadow-2xl p-1.5 pr-2 items-center border border-white/80">
+                            <div class="flex-1 flex items-center px-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M21 21l-6-6m2-5a7 7 0 01-14 0 7 7 0 0114 0z" />
+                                </svg>
+                                <input id="hero-search" 
+                                       type="text" 
+                                       placeholder="Search restaurants, golf, spas, vendors, events..."
+                                       onkeyup="if (event.key === 'Enter') { document.getElementById('directory').scrollIntoView({ behavior: 'smooth' }); filterListings(); }"
+                                       class="flex-1 text-lg placeholder:text-slate-400 outline-none bg-transparent text-slate-800">
+                            </div>
+                            <button onclick="document.getElementById('directory').scrollIntoView({ behavior: 'smooth' }); filterListings();"
+                                    class="px-9 py-3.5 bg-slate-900 hover:bg-slate-800 active:bg-black transition-all text-white text-sm font-semibold rounded-[2rem]">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Popular search chips -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <div onclick="quickSearch('best restaurants Scottsdale')" class="cursor-pointer text-xs px-4 py-1.5 bg-white/90 hover:bg-white text-slate-700 rounded-3xl border border-white/70 shadow-sm transition-all active:scale-95">best restaurants Scottsdale</div>
+                        <div onclick="quickSearch('TPC Scottsdale golf')" class="cursor-pointer text-xs px-4 py-1.5 bg-white/90 hover:bg-white text-slate-700 rounded-3xl border border-white/70 shadow-sm transition-all active:scale-95">TPC Scottsdale golf</div>
+                        <div onclick="quickSearch('event vendors Scottsdale')" class="cursor-pointer text-xs px-4 py-1.5 bg-white/90 hover:bg-white text-slate-700 rounded-3xl border border-white/70 shadow-sm transition-all active:scale-95">event vendors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 hidden md:block">
+            <div class="flex flex-col items-center text-white/60 text-xs tracking-widest">
+                <div>SCROLL TO EXPLORE</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mt-1 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST / STATS BAR -->
+    <div class="border-b border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center">
+                <div>
+                    <div class="text-3xl font-semibold text-slate-900 stat-number">1,284</div>
+                    <div class="text-sm text-slate-500 tracking-wide">VERIFIED LISTINGS</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-slate-900 stat-number">18,942</div>
+                    <div class="text-sm text-slate-500 tracking-wide">AUTHENTIC REVIEWS</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-slate-900 stat-number">4.7</div>
+                    <div class="text-sm text-slate-500 tracking-wide">AVERAGE RATING</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-semibold text-slate-900 stat-number">52k</div>
+                    <div class="text-sm text-slate-500 tracking-wide">MONTHLY VISITORS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="max-w-7xl mx-auto px-6 pt-14 pb-8" id="categories">
+        <div class="flex items-end justify-between mb-6">
+            <div>
+                <h2 class="section-header text-3xl font-semibold tracking-tight">Browse by Category</h2>
+                <p class="text-slate-500 mt-1.5">Find exactly what you're looking for in Scottsdale</p>
+            </div>
+            <a href="#directory" class="hidden md:inline text-sm font-medium text-amber-700 hover:text-amber-800">View full directory →</a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-3">
+            <!-- Category chips -->
+            <div onclick="filterByCategory('Restaurants')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🍽️</div>
+                <div>
+                    <div class="font-semibold text-sm">Restaurants</div>
+                    <div class="text-xs text-slate-500">312 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Golf')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">⛳</div>
+                <div>
+                    <div class="font-semibold text-sm">Golf</div>
+                    <div class="text-xs text-slate-500">48 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Spas & Wellness')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🧖</div>
+                <div>
+                    <div class="font-semibold text-sm">Spas &amp; Wellness</div>
+                    <div class="text-xs text-slate-500">87 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Shopping')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🛍️</div>
+                <div>
+                    <div class="font-semibold text-sm">Shopping</div>
+                    <div class="text-xs text-slate-500">124 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Events & Entertainment')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🎭</div>
+                <div>
+                    <div class="font-semibold text-sm">Events &amp; Entertainment</div>
+                    <div class="text-xs text-slate-500">96 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Real Estate')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🏠</div>
+                <div>
+                    <div class="font-semibold text-sm">Real Estate</div>
+                    <div class="text-xs text-slate-500">65 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Event Vendors')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">🎪</div>
+                <div>
+                    <div class="font-semibold text-sm">Event Vendors</div>
+                    <div class="text-xs text-slate-500">143 listings</div>
+                </div>
+            </div>
+            <div onclick="filterByCategory('Professional Services')" class="category-chip cursor-pointer flex items-center gap-x-3 px-5 py-4 bg-white border border-slate-200 hover:border-slate-300 rounded-3xl group">
+                <div class="text-2xl">💼</div>
+                <div>
+                    <div class="font-semibold text-sm">Professional Services</div>
+                    <div class="text-xs text-slate-500">209 listings</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIRECTORY / FEATURED LISTINGS -->
+    <div class="max-w-7xl mx-auto px-6 pb-16" id="directory">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-y-3 mb-6">
+            <div>
+                <h2 class="section-header text-3xl font-semibold tracking-tight">Featured Listings in Scottsdale</h2>
+                <p class="text-slate-500 mt-1">Handpicked &amp; verified businesses and vendors • Updated daily</p>
+            </div>
+            
+            <!-- Search + Filter controls -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div class="relative flex-1 md:w-80">
+                    <input id="directory-search" 
+                           type="text" 
+                           placeholder="Filter by name, keyword or category..."
+                           onkeyup="filterListings()"
+                           class="search-input w-full pl-11 pr-4 py-3 bg-white border border-slate-200 focus:border-amber-700 rounded-3xl text-sm outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 absolute left-4 top-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 01-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                
+                <select id="category-filter" onchange="filterListings()" 
+                        class="px-5 py-3 bg-white border border-slate-200 rounded-3xl text-sm font-medium outline-none cursor-pointer w-full sm:w-auto">
+                    <option value="">All Categories</option>
+                    <option value="Restaurants">Restaurants</option>
+                    <option value="Golf">Golf</option>
+                    <option value="Spas & Wellness">Spas &amp; Wellness</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Events & Entertainment">Events &amp; Entertainment</option>
+                    <option value="Real Estate">Real Estate</option>
+                    <option value="Event Vendors">Event Vendors</option>
+                    <option value="Professional Services">Professional Services</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Listings Grid -->
+        <div id="listings-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 listing-grid">
+            <!-- Populated dynamically via JavaScript -->
+        </div>
+        
+        <div class="mt-8 text-center">
+            <button onclick="showAllListings()" 
+                    class="inline-flex items-center gap-x-2 px-8 py-3 text-sm font-semibold border border-slate-300 hover:bg-white rounded-3xl transition-colors">
+                <span>Browse All 1,284 Listings</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </button>
+            <p class="text-xs text-slate-400 mt-3">Showing 12 featured • Full directory includes filters, maps &amp; 100% verified contacts</p>
+        </div>
+    </div>
+
+    <!-- VENDOR RELATIONS / B2B SECTION -->
+    <div class="bg-slate-900 py-16" id="vendors">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="inline px-4 py-1 rounded-3xl bg-white/10 text-white text-xs tracking-[1.5px] font-medium mb-4">VENDOR NETWORK</div>
+                    <h2 class="text-white text-4xl md:text-5xl font-semibold tracking-tighter heading-serif leading-none">Build stronger<br>vendor relationships<br>in Scottsdale.</h2>
+                    <p class="mt-6 max-w-lg text-lg text-white/75">Whether you're planning a wedding at The Phoenician, a corporate event at Talking Stick, or need reliable suppliers for your business — connect directly with vetted local vendors who understand Scottsdale standards.</p>
+                    
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <button onclick="showVendorJoinModal()"
+                                class="px-8 py-4 bg-white text-slate-900 font-semibold rounded-3xl text-sm hover:bg-amber-50 transition-colors">Join the Vendor Network — Free</button>
+                        <button onclick="document.getElementById('discover').scrollIntoView({ behavior: 'smooth' })"
+                                class="px-8 py-4 border border-white/30 hover:bg-white/5 text-white font-semibold rounded-3xl text-sm transition-colors">Post a Vendor RFP</button>
+                    </div>
+                    
+                    <div class="mt-8 flex items-center gap-x-8 text-sm">
+                        <div class="flex items-center gap-x-2 text-white/70">
+                            <div class="text-emerald-400">●</div>
+                            <span>143 active vendors</span>
+                        </div>
+                        <div class="text-white/40">|</div>
+                        <div class="text-white/70">4.8 avg vendor rating</div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 mt-10 md:mt-0">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-7 text-sm">
+                        <div class="uppercase tracking-widest text-xs text-white/50 mb-4">POPULAR VENDOR CATEGORIES</div>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-3 text-white/90">
+                            <div class="flex items-center gap-x-2.5">• Event Catering &amp; Staffing</div>
+                            <div class="flex items-center gap-x-2.5">• Photography &amp; Videography</div>
+                            <div class="flex items-center gap-x-2.5">• Florals &amp; Design</div>
+                            <div class="flex items-center gap-x-2.5">• AV / Production</div>
+                            <div class="flex items-center gap-x-2.5">• Transportation &amp; Valet</div>
+                            <div class="flex items-center gap-x-2.5">• Tent &amp; Structure Rentals</div>
+                            <div class="flex items-center gap-x-2.5">• Security &amp; Staffing</div>
+                            <div class="flex items-center gap-x-2.5">• Specialty Entertainment</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REVIEWS SECTION -->
+    <div class="max-w-7xl mx-auto px-6 py-16" id="reviews">
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <h2 class="section-header text-3xl font-semibold tracking-tight">Recent Verified Reviews</h2>
+                <p class="text-slate-500">Real experiences from real Scottsdale visitors and locals</p>
+            </div>
+            <button onclick="showReviewModal()" 
+                    class="hidden md:flex items-center gap-x-2 text-sm font-semibold px-6 h-11 border border-slate-300 hover:bg-white rounded-3xl">
+                <span>Write a Review</span>
+            </button>
+        </div>
+
+        <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Populated by JS -->
+        </div>
+        
+        <div class="mt-6 text-center md:hidden">
+            <button onclick="showReviewModal()" class="text-sm font-semibold px-7 py-3 border border-slate-300 rounded-3xl">Write a Review</button>
+        </div>
+    </div>
+
+    <!-- DISCOVER / SEO CONTENT SECTION -->
+    <div class="bg-white border-t border-b border-slate-100 py-16" id="discover">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl mb-10">
+                <h2 class="section-header text-3xl font-semibold tracking-tight">Discover Scottsdale</h2>
+                <p class="text-slate-600 mt-3">Expert guides, local insights, and answers to how people actually search for the best of Scottsdale.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- SEO Content Cards -->
+                <div class="group border border-slate-200 hover:border-slate-300 transition-colors rounded-3xl p-7 bg-white">
+                    <div class="text-xs font-semibold tracking-widest text-amber-700 mb-2">GUIDE • JUNE 2026</div>
+                    <h3 class="font-semibold text-xl tracking-tight group-hover:text-amber-700 transition-colors">Top 12 Restaurants in Scottsdale Right Now</h3>
+                    <p class="mt-3 text-sm text-slate-600 line-clamp-3">From intimate Old Town patios to desert-view fine dining at The Phoenician and Mountain Shadows. Our latest verified picks based on 4,800+ diner reviews.</p>
+                    <div class="mt-5 text-xs flex items-center gap-x-2 text-amber-700 font-medium">Read the full guide →</div>
+                </div>
+                
+                <div class="group border border-slate-200 hover:border-slate-300 transition-colors rounded-3xl p-7 bg-white">
+                    <div class="text-xs font-semibold tracking-widest text-amber-700 mb-2">GOLF • SUMMER 2026</div>
+                    <h3 class="font-semibold text-xl tracking-tight group-hover:text-amber-700 transition-colors">Best Scottsdale Golf Courses for Summer Play</h3>
+                    <p class="mt-3 text-sm text-slate-600 line-clamp-3">Beat the heat at TPC Stadium Course, Troon North, or the new 2025 remodel at Grayhawk. Includes twilight rates, conditions reports &amp; contact info.</p>
+                    <div class="mt-5 text-xs flex items-center gap-x-2 text-amber-700 font-medium">Read the full guide →</div>
+                </div>
+                
+                <div class="group border border-slate-200 hover:border-slate-300 transition-colors rounded-3xl p-7 bg-white">
+                    <div class="text-xs font-semibold tracking-widest text-amber-700 mb-2">EVENTS • VENDOR TIPS</div>
+                    <h3 class="font-semibold text-xl tracking-tight group-hover:text-amber-700 transition-colors">How to Choose &amp; Vet Event Vendors in Scottsdale</h3>
+                    <p class="mt-3 text-sm text-slate-600 line-clamp-3">A practical checklist used by local planners: insurance requirements, deposits, Scottsdale-specific permits, and questions that reveal the best partners.</p>
+                    <div class="mt-5 text-xs flex items-center gap-x-2 text-amber-700 font-medium">Read the full guide →</div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-xs text-center text-slate-400">More guides on <span class="font-medium text-slate-500">events this month</span>, <span class="font-medium text-slate-500">luxury real estate</span>, <span class="font-medium text-slate-500">spa packages</span> and <span class="font-medium text-slate-500">Scottsdale 55+ communities</span> coming soon.</div>
+        </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="max-w-5xl mx-auto px-6 py-20 text-center">
+        <div class="max-w-md mx-auto">
+            <h2 class="text-4xl tracking-tighter font-semibold">Ready to get the most out of Scottsdale?</h2>
+            <p class="mt-4 text-slate-600">Join thousands of locals and visitors who use SDL.contact as their trusted local resource.</p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <button onclick="showListBusinessModal()" 
+                        class="px-9 py-4 bg-slate-900 hover:bg-black transition-all text-white font-semibold rounded-3xl text-sm">List Your Business or Service</button>
+                <button onclick="document.getElementById('directory').scrollIntoView({ behavior: 'smooth' })" 
+                        class="px-9 py-4 border border-slate-300 hover:bg-slate-50 font-semibold rounded-3xl text-sm">Start Exploring</button>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-5">Free to browse • Free basic listings • Premium featured placements available</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white/70 text-sm">
+        <div class="max-w-7xl mx-auto px-6 pt-14 pb-10">
+            <div class="grid md:grid-cols-12 gap-y-12">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-x-3 mb-4">
+                        <div class="w-9 h-9 bg-white rounded-2xl flex items-center justify-center">
+                            <span class="text-slate-900 font-bold text-2xl tracking-tighter">SDL</span>
+                        </div>
+                        <div class="font-semibold text-white text-2xl tracking-tighter">sdl.contact</div>
+                    </div>
+                    <div class="max-w-xs text-white/60">The destination address for everything Scottsdale, Arizona. Verified. Local. Connected.</div>
+                    
+                    <div class="mt-6 text-xs">© 2026 SDL.contact. All rights reserved.<br>Scottsdale, Arizona</div>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <div class="font-medium text-white mb-4 text-xs tracking-widest">EXPLORE</div>
+                    <div class="space-y-[9px] text-sm">
+                        <div><a href="#directory" class="hover:text-white">Business Directory</a></div>
+                        <div><a href="#reviews" class="hover:text-white">Verified Reviews</a></div>
+                        <div><a href="#vendors" class="hover:text-white">Vendor Network</a></div>
+                        <div><a href="#discover" class="hover:text-white">Local Guides</a></div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-4">
+                    <div class="font-medium text-white mb-4 text-xs tracking-widest">FOR BUSINESSES &amp; VENDORS</div>
+                    <div class="space-y-[9px] text-sm">
+                        <div><a href="#" onclick="showListBusinessModal()" class="hover:text-white cursor-pointer">Add or Claim Your Listing</a></div>
+                        <div><a href="#" onclick="showVendorJoinModal()" class="hover:text-white cursor-pointer">Join Vendor Network</a></div>
+                        <div><a href="#" class="hover:text-white">Featured Placement &amp; Advertising</a></div>
+                        <div><a href="#" class="hover:text-white">API &amp; Data Access (for partners)</a></div>
+                    </div>
+                    
+                    <div class="mt-8 text-[10px] leading-snug text-white/50 max-w-xs">
+                        SDL.contact is not affiliated with the City of Scottsdale. All reviews are moderated for authenticity. Contact data is provided by businesses or publicly available sources.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BUSINESS DETAIL MODAL -->
+    <div id="business-modal" onclick="if (event.target.id === 'business-modal') hideBusinessModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl">
+            <!-- Dynamic content injected by JS -->
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- LIST BUSINESS MODAL -->
+    <div id="list-business-modal" onclick="if (event.target.id === 'list-business-modal') hideListBusinessModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-lg rounded-3xl p-8">
+            <div class="flex justify-between items-start">
+                <div>
+                    <div class="font-semibold text-2xl tracking-tight">List Your Business</div>
+                    <div class="text-sm text-slate-500 mt-1">Free basic listing • Premium options available</div>
+                </div>
+                <button onclick="hideListBusinessModal()" class="text-slate-400 hover:text-slate-600">✕</button>
+            </div>
+            
+            <form id="list-business-form" onsubmit="submitBusinessListing(event)" class="mt-6 space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">BUSINESS NAME</label>
+                        <input type="text" id="biz-name" required class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">CATEGORY</label>
+                        <select id="biz-category" required class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none">
+                            <option value="">Select category...</option>
+                            <option>Restaurants</option>
+                            <option>Golf</option>
+                            <option>Spas & Wellness</option>
+                            <option>Shopping</option>
+                            <option>Events & Entertainment</option>
+                            <option>Real Estate</option>
+                            <option>Event Vendors</option>
+                            <option>Professional Services</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1.5">ADDRESS IN SCOTTSDALE</label>
+                    <input type="text" id="biz-address" placeholder="e.g. 7135 E Camelback Rd, Scottsdale, AZ 85251" required class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none">
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">PHONE</label>
+                        <input type="tel" id="biz-phone" placeholder="(480) 555-0199" class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none">
+                    </div>
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">WEBSITE</label>
+                        <input type="url" id="biz-website" placeholder="https://yourbusiness.com" class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1.5">SHORT DESCRIPTION (max 140 chars)</label>
+                    <textarea id="biz-desc" rows="2" maxlength="140" required class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none resize-y" placeholder="Modern American restaurant in Old Town with patio dining and craft cocktails..."></textarea>
+                </div>
+                
+                <div class="pt-2 flex gap-x-4">
+                    <button type="button" onclick="hideListBusinessModal()" class="flex-1 py-3.5 border border-slate-300 rounded-3xl font-semibold text-sm">Cancel</button>
+                    <button type="submit" class="flex-1 py-3.5 bg-slate-900 text-white rounded-3xl font-semibold text-sm">Submit for Review</button>
+                </div>
+                <p class="text-center text-[10px] text-slate-400">Our team reviews all submissions within 48 hours. Premium featured placements start at $99/mo.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- REVIEW MODAL -->
+    <div id="review-modal" onclick="if (event.target.id === 'review-modal') hideReviewModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-md rounded-3xl p-8">
+            <div class="flex justify-between items-center mb-6">
+                <div class="font-semibold text-2xl tracking-tight">Write a Review</div>
+                <button onclick="hideReviewModal()" class="text-xl leading-none text-slate-400 hover:text-slate-600">×</button>
+            </div>
+            
+            <form id="review-form" onsubmit="submitReview(event)" class="space-y-5">
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1.5">BUSINESS OR VENDOR</label>
+                    <select id="review-business" required class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1.5">YOUR RATING</label>
+                    <div class="flex gap-x-1" id="star-rating">
+                        <!-- Stars injected by JS -->
+                    </div>
+                    <input type="hidden" id="review-rating" value="5">
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1.5">YOUR REVIEW</label>
+                    <textarea id="review-text" rows="4" required maxlength="450" placeholder="What stood out? Service, atmosphere, value..." class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:border-amber-700 outline-none"></textarea>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">YOUR NAME (OPTIONAL)</label>
+                        <input type="text" id="review-name" placeholder="Alex M." class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm">
+                    </div>
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1.5">VISIT DATE</label>
+                        <input type="month" id="review-date" value="2026-05" class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm">
+                    </div>
+                </div>
+                
+                <div class="pt-3 flex gap-x-3">
+                    <button type="button" onclick="hideReviewModal()" class="flex-1 py-3.5 text-sm font-semibold border border-slate-300 rounded-3xl">Cancel</button>
+                    <button type="submit" class="flex-1 py-3.5 bg-amber-700 hover:bg-amber-800 transition-colors text-white text-sm font-semibold rounded-3xl">Publish Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- VENDOR JOIN MODAL -->
+    <div id="vendor-modal" onclick="if (event.target.id === 'vendor-modal') hideVendorModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-md rounded-3xl p-8">
+            <div>
+                <div class="font-semibold text-2xl tracking-tight">Join the Scottsdale Vendor Network</div>
+                <p class="text-sm text-slate-500 mt-1">Connect with event planners, businesses, and residents who need trusted local suppliers.</p>
+            </div>
+            
+            <form onsubmit="submitVendorJoin(event)" class="mt-6 space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1">COMPANY / VENDOR NAME</label>
+                        <input type="text" required class="w-full border border-slate-200 rounded-2xl px-4 py-[13px] text-sm">
+                    </div>
+                    <div>
+                        <label class="text-xs font-medium text-slate-500 block mb-1">CATEGORY</label>
+                        <select required class="w-full border border-slate-200 rounded-2xl px-4 py-[13px] text-sm">
+                            <option>Event Catering &amp; Staffing</option>
+                            <option>Photography &amp; Videography</option>
+                            <option>Florals &amp; Event Design</option>
+                            <option>AV / Production &amp; Lighting</option>
+                            <option>Transportation &amp; Valet</option>
+                            <option>Tent, Rentals &amp; Structures</option>
+                            <option>Security &amp; Guest Services</option>
+                            <option>Other / Specialty</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1">PRIMARY CONTACT EMAIL</label>
+                    <input type="email" required placeholder="you@yourcompany.com" class="w-full border border-slate-200 rounded-2xl px-4 py-[13px] text-sm">
+                </div>
+                
+                <div>
+                    <label class="text-xs font-medium text-slate-500 block mb-1">TELL US ABOUT YOUR SERVICES (OPTIONAL)</label>
+                    <textarea rows="3" class="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm" placeholder="We specialize in desert-chic weddings and large corporate activations at venues like The Scott Resort..."></textarea>
+                </div>
+                
+                <div class="pt-2 flex gap-x-3">
+                    <button type="button" onclick="hideVendorModal()" class="flex-1 py-3.5 border border-slate-300 text-sm font-semibold rounded-3xl">Maybe Later</button>
+                    <button type="submit" class="flex-1 py-3.5 bg-slate-900 text-white text-sm font-semibold rounded-3xl">Submit Application</button>
+                </div>
+                <p class="text-center text-[10px] text-slate-400">Free to join. Approval typically within 24-48 hours.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent', '#B45309');
+            
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'serif-custom': ['Playfair Display', 'Georgia', 'serif']
+                        }
+                    }
+                }
+            };
+        }
+
+        // Sample Listings Data (SEO-optimized names & descriptions)
+        let listings = [
+            {
+                id: 1,
+                name: "Olive & Ivy",
+                category: "Restaurants",
+                rating: 4.7,
+                reviewCount: 312,
+                address: "7135 E Camelback Rd, Scottsdale, AZ 85251",
+                phone: "(480) 994-1111",
+                website: "https://oliveandivy.com",
+                shortDesc: "Modern Mediterranean & American fare with a beautiful Old Town patio.",
+                fullDesc: "Olive & Ivy is a Scottsdale staple known for its vibrant atmosphere, craft cocktails, and Mediterranean-inspired menu. Located in the heart of Old Town, it features a stunning patio perfect for people-watching and Arizona evenings. Consistently ranked among the best restaurants in Scottsdale.",
+                tags: ["Old Town", "Patio Dining", "Mediterranean", "Cocktails"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 2,
+                name: "TPC Scottsdale - Stadium Course",
+                category: "Golf",
+                rating: 4.8,
+                reviewCount: 187,
+                address: "17020 N Hayden Rd, Scottsdale, AZ 85255",
+                phone: "(480) 585-4334",
+                website: "https://www.tpc.com/scottsdale",
+                shortDesc: "Home of the WM Phoenix Open. World-class desert golf experience.",
+                fullDesc: "TPC Scottsdale's Stadium Course is one of the most famous golf courses in the world, hosting the WM Phoenix Open every February. The 18th hole 'The Coliseum' offers an unforgettable spectator experience. Excellent practice facilities and pro shop.",
+                tags: ["PGA Tour", "Desert Golf", "Public Play", "WM Phoenix Open"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 3,
+                name: "The Phoenician Resort & Spa",
+                category: "Spas & Wellness",
+                rating: 4.6,
+                reviewCount: 94,
+                address: "6000 E Camelback Rd, Scottsdale, AZ 85251",
+                phone: "(480) 941-8200",
+                website: "https://www.thephoenician.com",
+                shortDesc: "Luxury resort spa with 12 treatment rooms and stunning mountain views.",
+                fullDesc: "The Centre for Well-Being at The Phoenician offers world-class spa treatments, fitness programs, and wellness experiences. Enjoy the signature desert-inspired treatments, outdoor pools, and impeccable service in a breathtaking setting at the base of Camelback Mountain.",
+                tags: ["Luxury Spa", "Resort", "Wellness", "Camelback Mountain"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 4,
+                name: "Scottsdale Fashion Square",
+                category: "Shopping",
+                rating: 4.3,
+                reviewCount: 156,
+                address: "7014 E Camelback Rd, Scottsdale, AZ 85251",
+                phone: "(480) 941-2140",
+                website: "https://www.fashionsquare.com",
+                shortDesc: "Premier shopping destination with 240+ stores including luxury brands.",
+                fullDesc: "Scottsdale Fashion Square is the Valley's premier shopping and dining destination featuring Nordstrom, Dillard's, Apple, Tesla, and dozens of upscale boutiques and restaurants. Recently renovated with a beautiful central plaza and events throughout the year.",
+                tags: ["Luxury Shopping", "Old Town", "Dining", "Events"],
+                verified: true,
+                featured: false
+            },
+            {
+                id: 5,
+                name: "Desert Rose Catering & Events",
+                category: "Event Vendors",
+                rating: 4.9,
+                reviewCount: 78,
+                address: "Serving Scottsdale & Greater Phoenix",
+                phone: "(602) 555-0198",
+                website: "https://desertrosecatering.com",
+                shortDesc: "Award-winning catering and full-service event production for weddings & corporate.",
+                fullDesc: "Desert Rose is a preferred vendor at many of Scottsdale's top venues including The Scott Resort, Mountain Shadows, and The Phoenician. Known for creative cuisine, impeccable service, and seamless execution of events from 20 to 2,000 guests.",
+                tags: ["Catering", "Weddings", "Corporate Events", "Preferred Vendor"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 6,
+                name: "Sonoran Lights Photography",
+                category: "Event Vendors",
+                rating: 4.8,
+                reviewCount: 61,
+                address: "Scottsdale, AZ 85260",
+                phone: "(480) 555-7832",
+                website: "https://sonoranlightsphoto.com",
+                shortDesc: "Specializing in luxury weddings, engagements, and corporate events across the Valley.",
+                fullDesc: "With over 12 years capturing Scottsdale's most memorable moments, Sonoran Lights brings an editorial yet warm style to every wedding and event. Available for full-day coverage, engagement sessions, and corporate photography at venues throughout Scottsdale.",
+                tags: ["Wedding Photographer", "Luxury Events", "Editorial Style"],
+                verified: true,
+                featured: false
+            },
+            {
+                id: 7,
+                name: "AZ Peak Event Rentals",
+                category: "Event Vendors",
+                rating: 4.5,
+                reviewCount: 42,
+                address: "14888 N 73rd St, Scottsdale, AZ 85260",
+                phone: "(480) 555-4411",
+                website: "https://azpeakevents.com",
+                shortDesc: "Premium tent, furniture, and decor rentals for upscale Scottsdale events.",
+                fullDesc: "AZ Peak provides high-end event rentals including clear span tents, lounge furniture, linens, and specialty decor. Trusted by planners for events at private estates, resorts, and venues across Scottsdale and Paradise Valley.",
+                tags: ["Event Rentals", "Tents", "Furniture", "Luxury Weddings"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 8,
+                name: "Realty One Group - Scottsdale Premier",
+                category: "Real Estate",
+                rating: 4.4,
+                reviewCount: 89,
+                address: "7975 N Hayden Rd #C-100, Scottsdale, AZ 85258",
+                phone: "(480) 555-2900",
+                website: "https://scottsdalepremier.realestate",
+                shortDesc: "Full-service real estate team specializing in luxury homes and 55+ communities.",
+                fullDesc: "The Scottsdale Premier team at Realty One Group has helped hundreds of families buy and sell in Scottsdale, Arcadia, and Paradise Valley. Experts in golf course properties, custom homes, and active adult communities like those in North Scottsdale.",
+                tags: ["Luxury Homes", "55+ Communities", "Golf Properties", "Buyer Representation"],
+                verified: true,
+                featured: false
+            },
+            {
+                id: 9,
+                name: "The Scott Resort & Spa",
+                category: "Spas & Wellness",
+                rating: 4.5,
+                reviewCount: 67,
+                address: "4925 N Scottsdale Rd, Scottsdale, AZ 85251",
+                phone: "(480) 424-6000",
+                website: "https://thescottresort.com",
+                shortDesc: "Boutique resort in Old Town with full-service spa and vibrant pool scene.",
+                fullDesc: "The Scott Resort offers a more intimate luxury experience in the heart of Old Town Scottsdale. Features a beautiful spa, lively pool bar, and excellent on-site dining. Popular with both leisure travelers and locals for staycations and events.",
+                tags: ["Boutique Resort", "Old Town", "Pool", "Spa"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 10,
+                name: "Mountain Shadows",
+                category: "Restaurants",
+                rating: 4.6,
+                reviewCount: 124,
+                address: "5445 E Lincoln Dr, Paradise Valley, AZ 85253",
+                phone: "(855) 421-8001",
+                website: "https://www.mountainshadows.com",
+                shortDesc: "Iconic resort dining with sweeping mountain views and modern American cuisine.",
+                fullDesc: "Mountain Shadows is a Scottsdale landmark offering spectacular views of Camelback Mountain. The restaurant and lounge are favorites for brunch, dinner, and events. Recently renovated with a fresh, contemporary design while honoring its mid-century roots.",
+                tags: ["Resort Dining", "Mountain Views", "Brunch", "Events"],
+                verified: true,
+                featured: false
+            },
+            {
+                id: 11,
+                name: "Scottsdale Arts District Events",
+                category: "Events & Entertainment",
+                rating: 4.2,
+                reviewCount: 38,
+                address: "Old Town Scottsdale",
+                phone: "(480) 874-4666",
+                website: "https://www.scottsdalearts.org",
+                shortDesc: "Monthly art walks, festivals, and cultural events in historic Old Town.",
+                fullDesc: "The Scottsdale Arts District hosts the famous Thursday Night ArtWalk, major festivals like Scottsdale's Celebration of the Arts, and hundreds of performances and exhibitions throughout the year. A must for visitors and locals alike.",
+                tags: ["ArtWalk", "Festivals", "Cultural Events", "Old Town"],
+                verified: true,
+                featured: true
+            },
+            {
+                id: 12,
+                name: "Camelback Mountain Hiking & Guides",
+                category: "Professional Services",
+                rating: 4.7,
+                reviewCount: 53,
+                address: "Echo Canyon Trailhead, Phoenix/Scottsdale border",
+                phone: "(602) 555-8877",
+                website: "https://camelbackhiking.com",
+                shortDesc: "Guided hikes, sunrise tours, and private experiences on Camelback & Piestewa Peak.",
+                fullDesc: "Professional guided hiking experiences on Camelback Mountain and surrounding trails. Perfect for visitors wanting a safe, informative, and memorable desert experience. Private and group options available year-round.",
+                tags: ["Hiking Guides", "Camelback Mountain", "Sunrise Hikes", "Outdoor Adventures"],
+                verified: true,
+                featured: false
+            }
+        ];
+
+        // Sample Reviews Data
+        let reviews = [
+            {
+                id: 1,
+                businessId: 1,
+                businessName: "Olive & Ivy",
+                rating: 5,
+                text: "The patio is magical at sunset. Service was impeccable and the branzino was perfectly cooked. One of our favorite date night spots in Scottsdale.",
+                author: "Jennifer K.",
+                date: "2026-06-12",
+                verified: true
+            },
+            {
+                id: 2,
+                businessId: 2,
+                businessName: "TPC Scottsdale - Stadium Course",
+                rating: 5,
+                text: "Played the Stadium Course for the first time during the WM Phoenix Open week. The course was in immaculate condition and the energy around the 16th and 18th holes is electric. Bucket list experience.",
+                author: "Michael T.",
+                date: "2026-02-08",
+                verified: true
+            },
+            {
+                id: 3,
+                businessId: 5,
+                businessName: "Desert Rose Catering & Events",
+                rating: 5,
+                text: "Desert Rose catered our daughter's wedding at The Phoenician. From the initial tasting to the last dance, everything was flawless. The food was outstanding and their team anticipated every need. Highly recommend!",
+                author: "Robert & Linda S.",
+                date: "2026-05-22",
+                verified: true
+            },
+            {
+                id: 4,
+                businessId: 3,
+                businessName: "The Phoenician Resort & Spa",
+                rating: 4,
+                text: "The spa treatments were excellent, especially the desert stone massage. The facility is beautiful and very well maintained. Only minor complaint was the locker room could use updating, but overall a wonderful experience.",
+                author: "Patricia M.",
+                date: "2026-04-30",
+                verified: true
+            },
+            {
+                id: 5,
+                businessId: 7,
+                businessName: "AZ Peak Event Rentals",
+                rating: 5,
+                text: "Rented tents, lounge furniture, and lighting for a large corporate event at a private home in North Scottsdale. Everything arrived on time, looked incredible, and the team was professional from start to finish. Will use again.",
+                author: "David Chen, Event Producer",
+                date: "2026-03-15",
+                verified: true
+            }
+        ];
+
+        // Render Listings Grid
+        function renderListings(filteredListings) {
+            const grid = document.getElementById('listings-grid');
+            grid.innerHTML = '';
+            
+            const toShow = filteredListings || listings.slice(0, 12);
+            
+            toShow.forEach(listing => {
+                const card = document.createElement('div');
+                card.className = `business-card bg-white border border-slate-200 rounded-3xl overflow-hidden flex flex-col cursor-pointer`;
+                card.onclick = () => showBusinessModal(listing.id);
+                
+                const stars = Array(5).fill(0).map((_, i) => 
+                    `<svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 ${i < Math.floor(listing.rating) ? 'text-amber-400' : 'text-slate-200'}" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`
+                ).join('');
+                
+                card.innerHTML = `
+                    <div class="px-5 pt-5 pb-4 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <div class="flex items-center gap-x-2">
+                                    <h3 class="font-semibold text-lg tracking-tight">${listing.name}</h3>
+                                    ${listing.verified ? `<span class="sdl-badge text-[9px] px-1.5 py-px">VERIFIED</span>` : ''}
+                                </div>
+                                <div class="text-xs text-slate-500 mt-0.5">${listing.category}</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="flex items-center justify-end gap-x-px">${stars}</div>
+                                <div class="text-xs text-slate-500 mt-px">${listing.rating} <span class="text-[10px]">(${listing.reviewCount})</span></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-auto pt-4">
+                            <div class="text-sm text-slate-600 line-clamp-2">${listing.shortDesc}</div>
+                            
+                            <div class="mt-4 pt-4 border-t flex items-center justify-between text-xs">
+                                <div class="flex items-center text-slate-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 mr-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.25" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                    <span class="truncate max-w-[150px]">${listing.address.split(',')[0]}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-5 py-3.5 bg-slate-50 border-t flex items-center justify-between text-xs">
+                        <div class="font-medium text-amber-700">View details &amp; contact →</div>
+                    </div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter listings
+        function filterListings() {
+            const searchTerm = document.getElementById('directory-search').value.toLowerCase().trim();
+            const categoryFilter = document.getElementById('category-filter').value;
+            
+            let filtered = listings;
+            
+            if (searchTerm) {
+                filtered = filtered.filter(l => 
+                    l.name.toLowerCase().includes(searchTerm) ||
+                    l.shortDesc.toLowerCase().includes(searchTerm) ||
+                    l.category.toLowerCase().includes(searchTerm) ||
+                    l.tags.some(t => t.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            if (categoryFilter) {
+                filtered = filtered.filter(l => l.category === categoryFilter);
+            }
+            
+            renderListings(filtered);
+        }
+
+        function filterByCategory(category) {
+            // Scroll to directory
+            document.getElementById('directory').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Set filter and trigger
+            setTimeout(() => {
+                document.getElementById('category-filter').value = category;
+                filterListings();
+            }, 650);
+        }
+
+        function quickSearch(term) {
+            document.getElementById('directory').scrollIntoView({ behavior: 'smooth' });
+            
+            setTimeout(() => {
+                const searchInput = document.getElementById('directory-search');
+                searchInput.value = term;
+                filterListings();
+            }, 700);
+        }
+
+        // Show business detail modal
+        function showBusinessModal(id) {
+            const listing = listings.find(l => l.id === id);
+            if (!listing) return;
+            
+            const modal = document.getElementById('business-modal');
+            const content = document.getElementById('modal-content');
+            
+            const starsHTML = Array(5).fill(0).map((_, i) => 
+                `<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ${i < Math.floor(listing.rating) ? 'text-amber-400' : 'text-slate-200'}" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`
+            ).join('');
+            
+            const relatedReviews = reviews.filter(r => r.businessId === listing.id);
+            
+            content.innerHTML = `
+                <div class="px-7 pt-7 pb-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="flex items-center gap-x-3">
+                                <h2 class="text-3xl font-semibold tracking-tight">${listing.name}</h2>
+                                ${listing.verified ? `<span class="sdl-badge px-3 py-0.5 text-xs">VERIFIED CONTACT</span>` : ''}
+                            </div>
+                            <div class="flex items-center gap-x-2 mt-1">
+                                <span class="text-sm px-3 py-0.5 bg-slate-100 text-slate-600 rounded-2xl">${listing.category}</span>
+                                <div class="flex items-center">${starsHTML} <span class="ml-2 text-sm text-slate-500">${listing.rating} (${listing.reviewCount} reviews)</span></div>
+                            </div>
+                        </div>
+                        <button onclick="hideBusinessModal()" class="text-3xl leading-none text-slate-300 hover:text-slate-400">×</button>
+                    </div>
+                    
+                    <div class="mt-5 text-[15px] text-slate-600">${listing.fullDesc}</div>
+                    
+                    <!-- Contact Info -->
+                    <div class="mt-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                        <div class="flex gap-x-3">
+                            <div class="mt-0.5 text-slate-400 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500">ADDRESS</div>
+                                <div class="font-medium">${listing.address}</div>
+                            </div>
+                        </div>
+                        
+                        ${listing.phone ? `
+                        <div class="flex gap-x-3">
+                            <div class="mt-0.5 text-slate-400 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2 3 3 0 00-3 3v10a3 3 0 003 3 2 2 0 01-2-2m13.586-2.586a2 2 0 01-2.828 0l-4.244-4.243a8 8 0 1111.314-11.314z" /></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500">PHONE</div>
+                                <a href="tel:${listing.phone.replace(/[^0-9]/g, '')}" class="font-medium hover:text-amber-700">${listing.phone}</a>
+                            </div>
+                        </div>` : ''}
+                        
+                        ${listing.website ? `
+                        <div class="flex gap-x-3">
+                            <div class="mt-0.5 text-slate-400 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" /></svg>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500">WEBSITE</div>
+                                <a href="${listing.website}" target="_blank" class="font-medium hover:text-amber-700 break-all">${listing.website.replace('https://', '')}</a>
+                            </div>
+                        </div>` : ''}
+                    </div>
+                    
+                    <!-- Tags -->
+                    <div class="mt-6">
+                        <div class="text-xs text-slate-500 mb-2">TAGS</div>
+                        <div class="flex flex-wrap gap-2">
+                            ${listing.tags.map(tag => `<span class="text-xs px-4 py-1 bg-slate-100 text-slate-600 rounded-3xl">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews in modal -->
+                    ${relatedReviews.length > 0 ? `
+                    <div class="mt-8 pt-6 border-t">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="font-semibold">Recent Reviews</div>
+                            <div onclick="hideBusinessModal(); showReviewModal(${listing.id});" class="cursor-pointer text-xs font-medium text-amber-700 hover:text-amber-800">WRITE A REVIEW →</div>
+                        </div>
+                        
+                        <div class="space-y-4 text-sm">
+                            ${relatedReviews.slice(0, 2).map(r => `
+                                <div class="bg-slate-50 rounded-2xl p-4">
+                                    <div class="flex justify-between">
+                                        <div class="font-medium">${r.author}</div>
+                                        <div class="flex text-amber-400">${Array(r.rating).fill('★').join('')}</div>
+                                    </div>
+                                    <div class="text-slate-600 mt-1.5 text-[13px] leading-relaxed">"${r.text}"</div>
+                                    <div class="text-xs text-slate-400 mt-2">${new Date(r.date).toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'})}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>` : ''}
+                </div>
+                
+                <div class="px-7 py-5 bg-slate-50 border-t flex flex-wrap gap-3">
+                    ${listing.website ? `<a href="${listing.website}" target="_blank" class="flex-1 text-center py-3.5 border border-slate-300 hover:bg-white rounded-3xl text-sm font-semibold">Visit Website</a>` : ''}
+                    ${listing.phone ? `<a href="tel:${listing.phone.replace(/[^0-9]/g, '')}" class="flex-1 text-center py-3.5 bg-slate-900 text-white rounded-3xl text-sm font-semibold">Call Now</a>` : ''}
+                    <button onclick="hideBusinessModal(); showReviewModal(${listing.id});" class="flex-1 text-center py-3.5 border border-amber-700 text-amber-700 hover:bg-amber-50 rounded-3xl text-sm font-semibold">Write a Review</button>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hideBusinessModal() {
+            const modal = document.getElementById('business-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Render Reviews
+        function renderReviews() {
+            const container = document.getElementById('reviews-grid');
+            container.innerHTML = '';
+            
+            reviews.slice(0, 6).forEach(review => {
+                const card = document.createElement('div');
+                card.className = `review-card bg-white border border-slate-200 rounded-3xl p-6 text-sm`;
+                
+                const stars = Array(review.rating).fill('★').join('');
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold">${review.businessName}</div>
+                            <div class="text-xs text-slate-500">${review.author} • ${new Date(review.date).toLocaleDateString('en-US', {month:'short', year:'numeric'})}</div>
+                        </div>
+                        <div class="text-amber-400 text-lg leading-none">${stars}</div>
+                    </div>
+                    <div class="mt-4 text-slate-600 leading-relaxed">"${review.text}"</div>
+                    ${review.verified ? `<div class="mt-3 text-[10px] text-emerald-600 font-medium flex items-center gap-x-1"><span>✓</span> <span>VERIFIED REVIEW</span></div>` : ''}
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Star rating for review form
+        let currentRating = 5;
+        
+        function initStarRating() {
+            const container = document.getElementById('star-rating');
+            container.innerHTML = '';
+            
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('span');
+                star.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 cursor-pointer text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`;
+                star.onclick = () => setRating(i);
+                star.onmouseover = () => highlightStars(i);
+                star.onmouseout = () => highlightStars(currentRating);
+                container.appendChild(star);
+            }
+            
+            highlightStars(5);
+        }
+        
+        function setRating(rating) {
+            currentRating = rating;
+            document.getElementById('review-rating').value = rating;
+            highlightStars(rating);
+        }
+        
+        function highlightStars(rating) {
+            const stars = document.getElementById('star-rating').children;
+            for (let i = 0; i < stars.length; i++) {
+                if (i < rating) {
+                    stars[i].querySelector('svg').classList.add('text-amber-400');
+                    stars[i].querySelector('svg').classList.remove('text-slate-200');
+                } else {
+                    stars[i].querySelector('svg').classList.remove('text-amber-400');
+                    stars[i].querySelector('svg').classList.add('text-slate-200');
+                }
+            }
+        }
+
+        // Populate review business select
+        function populateReviewBusinessSelect(preselectedId = null) {
+            const select = document.getElementById('review-business');
+            select.innerHTML = '<option value="">Select a business or vendor...</option>';
+            
+            listings.forEach(listing => {
+                const opt = document.createElement('option');
+                opt.value = listing.id;
+                opt.textContent = `${listing.name} — ${listing.category}`;
+                if (preselectedId && listing.id === preselectedId) opt.selected = true;
+                select.appendChild(opt);
+            });
+        }
+
+        function showReviewModal(preselectedBusinessId = null) {
+            const modal = document.getElementById('review-modal');
+            populateReviewBusinessSelect(preselectedBusinessId);
+            initStarRating();
+            document.getElementById('review-form').reset();
+            currentRating = 5;
+            document.getElementById('review-rating').value = 5;
+            highlightStars(5);
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hideReviewModal() {
+            const modal = document.getElementById('review-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function submitReview(e) {
+            e.preventDefault();
+            
+            const businessId = parseInt(document.getElementById('review-business').value);
+            const rating = parseInt(document.getElementById('review-rating').value);
+            const text = document.getElementById('review-text').value.trim();
+            const author = document.getElementById('review-name').value.trim() || 'Anonymous';
+            const date = document.getElementById('review-date').value || '2026-06';
+            
+            if (!businessId || !text) {
+                alert('Please select a business and write your review.');
+                return;
+            }
+            
+            const business = listings.find(l => l.id === businessId);
+            
+            // Add new review
+            const newReview = {
+                id: Date.now(),
+                businessId: businessId,
+                businessName: business.name,
+                rating: rating,
+                text: text,
+                author: author,
+                date: date + '-01',
+                verified: false // New reviews are pending verification in real system
+            };
+            
+            reviews.unshift(newReview);
+            
+            // Update listing review count (demo)
+            business.reviewCount = (business.reviewCount || 0) + 1;
+            
+            hideReviewModal();
+            
+            // Refresh UI
+            renderReviews();
+            renderListings(); // Update counts if shown
+            
+            // Success toast
+            showToast(`Thank you! Your review for ${business.name} has been submitted and will appear after moderation.`);
+        }
+
+        // List business modal
+        function showListBusinessModal() {
+            document.getElementById('list-business-modal').classList.remove('hidden');
+            document.getElementById('list-business-modal').classList.add('flex');
+        }
+        
+        function hideListBusinessModal() {
+            document.getElementById('list-business-modal').classList.remove('flex');
+            document.getElementById('list-business-modal').classList.add('hidden');
+        }
+        
+        function submitBusinessListing(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('biz-name').value;
+            const category = document.getElementById('biz-category').value;
+            const address = document.getElementById('biz-address').value;
+            const phone = document.getElementById('biz-phone').value;
+            const website = document.getElementById('biz-website').value;
+            const desc = document.getElementById('biz-desc').value;
+            
+            // In real app this would POST to backend/Cloudflare Worker
+            hideListBusinessModal();
+            
+            showToast(`Thank you, ${name}! Your listing has been submitted for review. We'll contact you within 48 hours.`);
+            
+            // Optionally add to listings immediately for demo
+            setTimeout(() => {
+                const newListing = {
+                    id: Date.now(),
+                    name: name,
+                    category: category,
+                    rating: 0,
+                    reviewCount: 0,
+                    address: address,
+                    phone: phone,
+                    website: website,
+                    shortDesc: desc,
+                    fullDesc: desc,
+                    tags: [category],
+                    verified: false,
+                    featured: false
+                };
+                listings.unshift(newListing);
+                renderListings();
+            }, 1200);
+        }
+
+        // Vendor modal
+        function showVendorJoinModal() {
+            document.getElementById('vendor-modal').classList.remove('hidden');
+            document.getElementById('vendor-modal').classList.add('flex');
+        }
+        
+        function hideVendorModal() {
+            document.getElementById('vendor-modal').classList.remove('flex');
+            document.getElementById('vendor-modal').classList.add('hidden');
+        }
+        
+        function submitVendorJoin(e) {
+            e.preventDefault();
+            hideVendorModal();
+            showToast('Application received! Our vendor relations team will reach out within 24-48 hours.');
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = `fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-6 py-3.5 rounded-3xl shadow-xl flex items-center gap-x-3 text-sm z-[99]`;
+            toast.innerHTML = `
+                <div>${message}</div>
+                <button class="text-white/60 hover:text-white ml-2">×</button>
+            `;
+            document.body.appendChild(toast);
+            
+            toast.querySelector('button').onclick = () => toast.remove();
+            
+            setTimeout(() => {
+                if (toast.parentNode) toast.parentNode.removeChild(toast);
+            }, 5200);
+        }
+
+        function showAllListings() {
+            document.getElementById('directory-search').value = '';
+            document.getElementById('category-filter').value = '';
+            renderListings(listings);
+            document.getElementById('directory').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Initialize everything
+        function initializeSite() {
+            initTailwind();
+            
+            // Render initial listings (first 12)
+            renderListings(listings.slice(0, 12));
+            
+            // Render initial reviews
+            renderReviews();
+            
+            // Make sure hero search also works well
+            const heroSearch = document.getElementById('hero-search');
+            if (heroSearch) {
+                heroSearch.addEventListener('focus', () => {
+                    // Optional: could prefill or highlight
+                });
+            }
+            
+            // Keyboard support for directory search
+            const dirSearch = document.getElementById('directory-search');
+            if (dirSearch) {
+                dirSearch.addEventListener('keyup', function(e) {
+                    if (e.key === '/' && document.activeElement !== dirSearch) {
+                        e.preventDefault();
+                        dirSearch.focus();
+                    }
+                });
+            }
+            
+            // Bonus: Press "/" to focus directory search (power user SEO-friendly)
+            document.addEventListener('keydown', function(e) {
+                if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                    e.preventDefault();
+                    const dir = document.getElementById('directory-search');
+                    if (dir) {
+                        document.getElementById('directory').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(() => dir.focus(), 650);
+                    }
+                }
+            });
+            
+            // Demo: Show a welcome toast once (subtle)
+            // setTimeout(() => {
+            //     // Disabled for clean first load; can enable for testing
+            // }, 8500);
+            
+            console.log('%c[SDL.contact] Website initialized successfully. SEO-optimized static site ready for Cloudflare deployment.', 'color:#64748b');
+        }
+
+        // Boot the site
+        window.onload = initializeSite;
+        
+        // Expose some functions for debugging / future expansion
+        window.SDL = { filterListings, showBusinessModal, showReviewModal };
+    </script>
+</body>
+</html>

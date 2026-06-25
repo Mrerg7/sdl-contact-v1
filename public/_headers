@@ -1,0 +1,7 @@
+# Canonical enforcement
+https://sdl.contact/*
+  Link: <https://sdl.contact>; rel="canonical"
+
+# No index for 404s
+/404.html
+  X-Robots-Tag: noindex
