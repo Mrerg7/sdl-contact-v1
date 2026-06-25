@@ -13,6 +13,7 @@ export const SITE = {
 
 export const CF_IMAGES = {
   hero: 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/7ef10d95-083b-4a8f-6ef8-22998f178600/public',
+  secondary: 'https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/7bc4fc49-2e99-46dc-da48-8961e98c3600/public',
   accountHash: '-sPAUAWeA405NiWJ0SNIQA',
   imageId: '7ef10d95-083b-4a8f-6ef8-22998f178600',
 } as const;

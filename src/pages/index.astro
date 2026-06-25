@@ -4,6 +4,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
 import TrustBar from '../components/TrustBar.astro';
+import CloudflareImage from '../components/CloudflareImage.astro';
+import { CF_IMAGES } from '../config/site';
 import Footer from '../components/Footer.astro';
 
 const sortByOrder = <T extends { data: { order: number } }>(items: T[]) =>
@@ -22,6 +24,21 @@ const [useCases, marketStats, valuePillars] = await Promise.all([
     <Hero />
 
     <TrustBar />
+
+    <!-- Secondary visual break -->
+    <section class="border-t border-white/10 bg-black">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+        <div class="rounded-3xl overflow-hidden border border-white/10 ring-1 ring-white/5">
+          <CloudflareImage
+            src={CF_IMAGES.secondary}
+            alt="sdl.contact — Versatile premium domain for Scottsdale, sales, security, and service platforms"
+            width={1920}
+            height={800}
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </section>
 
     <!-- Use Cases Section -->
     <section id="use-cases" class="section-bg py-20 md:py-28">
