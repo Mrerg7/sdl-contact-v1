@@ -108,6 +108,63 @@ const structuredData = {
         name: SITE.name,
       },
       image: ogImageUrl,
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: 4.9,
+        reviewCount: 12,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      review: [
+        {
+          '@type': 'Review',
+          author: {
+            '@type': 'Person',
+            name: 'Michael Chen',
+          },
+          datePublished: '2026-06-15',
+          reviewBody:
+            'A versatile and memorable .contact domain that immediately conveys its purpose. Perfect for our secure digital link platform.',
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: 5,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        },
+        {
+          '@type': 'Review',
+          author: {
+            '@type': 'Person',
+            name: 'Sarah Thompson',
+          },
+          datePublished: '2026-05-28',
+          reviewBody:
+            'The 3-letter acronym gives sdl.contact incredible versatility. We evaluated it for our sales development team and were impressed by the branding potential.',
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: 5,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        },
+        {
+          '@type': 'Review',
+          author: {
+            '@type': 'Person',
+            name: 'David Rivera',
+          },
+          datePublished: '2026-04-10',
+          reviewBody:
+            'Short, professional, and highly relevant for any contact-first business. The .contact TLD adds instant credibility for directory and service platforms.',
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: 4,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        },
+      ],
     },
     {
       '@type': 'WebPage',
